@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html style="background-color:white;">
+
+<head>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="bootstrap.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<style>
+
+#header{
+text-align:left;
+margin-left:300px;
+margin-top:50px;
+color:black;
+width:500px;
+height:150px;
+font-size:40pt;
+padding:2px;
+}
+
+
+#navigation,#alternatenavigation{
+margin-left:auto;
+color:black;
+background-color:blue;
+font-family:arial;
+font-size:14pt;
+width:100%;
+
+}
+
+#content{
+margin-left:300px;
+color:black;
+font-family:arial;
+font-size:16pt;
+float:left;
+width:600px;
+}
+
+#updatehistory{
+margin-top:200px;
+margin-left:300px;
+color:black;
+font-family:arial;
+font-size:14pt;
+width:600px;
+display: block;
+}
+
+html,body{
+margin:0px;
+height:100%;
+background: #565051; /* For browsers that do not support gradients */
+background: -webkit-linear-gradient(#565051, #D1D0CE); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(#565051, #D1D0CE); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(#565051, #D1D0CE); /* For Firefox 3.6 to 15 */
+background: linear-gradient(#565051, #D1D0CE); /* Standard syntax */
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<!--Important Navigation Bar, keep for all pages-->
+<div id="alternatenavigation">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">   
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav">
+        <li><a href="personal_bio.html">Home</a></li>
+        <li><a href="personal_artworks.html">My Art Works</a></li>
+        <li><a href="personal_applications.html">My Web Applications</a></li>
+        <li><a href="#">Some Other Stuff</a></li>
+    </div>
+  </div>
+</nav>
+</div>
+
+<div id="header">
+<h1>
+<b>Hi, my name is Eric Ying.</b>
+</h1>
+</div>
+
+
+<div id="content">
+<p>
+I currently live in Cupertino, California, and I am a senior at Cupertion High School. This is a bunch of filler text right now that I am probably going to fill up with my personal information if I want to. BLAH BLAH BLAH. <br>
+</p>
+</div>
+
+<br>
+
+<div id="updatehistory">
+<h2>Updates</h2><br>
+<p>
+6/16/16: Started on this page. 
+</p>
+</div>
+
+</body>	
+
+
+
+<script>
+document.getElementById("infoupdate").onclick=updateToInfo;
+document.getElementById("workupdate").onclick=updateToWork;
+document.getElementById("contactupdate").onclick=updateToContact;
+
+document.getElementById("infoupdate").onmouseover=shadeInfo;
+document.getElementById("workupdate").onmouseover=shadeWork;
+document.getElementById("contactupdate").onmouseover=shadeContact;
+
+document.getElementById("infoupdate").onmouseout=unshadeInfo;
+document.getElementById("workupdate").onmouseout=unshadeWork;
+document.getElementById("contactupdate").onmouseout=unshadeContact;
+
+function updateToInfo(){
+document.getElementById("content").innerHTML="<p>My name is Eric Ying and I am a senior at Cupertino High School. I am a very cool and mature person. </p>";
+}
+
+
+function updateToWork(){
+document.getElementById("content").innerHTML="<p>These are some of my works! </p>";
+}
+
+
+function updateToContact(){
+document.getElementById("content").innerHTML="<p>Email: <i>eric99ying@gmail.com</i></p>";
+}
+
+function shadeInfo(){
+document.getElementById("infoupdate").style.opacity=0.8;
+}
+
+function shadeWork(){
+document.getElementById("workupdate").style.opacity=0.8;
+}
+
+function shadeContact(){
+document.getElementById("contactupdate").style.opacity=0.8;
+}
+
+
+function unshadeInfo(){
+document.getElementById("infoupdate").style.opacity=1;
+}
+
+function unshadeWork(){
+document.getElementById("workupdate").style.opacity=1;
+}
+
+function unshadeContact(){
+document.getElementById("contactupdate").style.opacity=1;
+}
+</script>
+
+</html>
